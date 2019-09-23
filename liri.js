@@ -2,6 +2,7 @@ require("dotenv").config();
 let keys = require("./keys.js");
 let axios = require("axios");
 let moment = require("moment");
+let Spotify = require('node-spotify-api');
 
 let inputString = process.argv;
 
@@ -100,12 +101,46 @@ switch (liriType) {
         .catch(function(error) {
             if (error.response) {
               }
-            //   console.log(error.config);
               console.log("=================================");
               console.log("I didn't find any concerts. Double check your spelling, maybe?");
               console.log("=================================");
 
         })
+        break;
+
+    case "spotify-this-song":
+        let trackName = "";
+
+        for (let i = 3; i < inputString.length; i++) {
+            if (i > 3 && i < inputString.length) {
+                trackName = trackName + " " + inputString[i];
+            } else {
+                trackName += inputString[i];
+            }
+        }
+
+        console.log(trackName);
+
+        let spotify = new Spotify(keys.spotify);
+
+        spotify.search({ type: 'track', query: trackName, limit: 3 }, function(err, data) {
+            if (err) {
+              return console.log('Error occurred: ' + err);
+            }
+           
+        //   console.log(data); 
+        //   console.log(data.tracks.items[0]); 
+
+
+          console.log("Artist: " + data.tracks.items[0].album.artists.name); 
+        //   console.log("Song name: " + data.tracks.items[0].name); 
+        //   console.log("Song name: " + data.tracks.items[0].preview_url); 
+
+          });
+
+
+
+
 }
 
 
