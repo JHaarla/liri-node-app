@@ -231,9 +231,6 @@ switch (randoAction) {
         artistFormatted = randoItem;
         fetchConcert();
         break;
-            
-
-
 }
 
 
