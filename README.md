@@ -3,8 +3,7 @@ The LIRI Bot is an exercise in learning node.js. In this project, I explore how 
 
 The LIRI Bot app starts off by requiring all the needed dependencies - axios, moment, spotify, etc. Then, once it is ran, it collects some information from the user that is passed into the appropriate API calls so the requested information can be returned and displayed on the command line. The user can request information about movies (by title), concerts (by artist) or songs (by track name).  
 
-**Instructions**  
-
+**Instructions:**  
 To use LIRI Bot, you'll need to run the liri.js file in node. Since LIRI Bot collects input from the command line, you'll need to also provide the search parameters. The three main functions of LIRI Bot are *spotify-this-song*, *movie-this* and *concert-this*. Following the function, the search parameter needs to entered. For example, the movie name, song title or artist/band name for concerts. Here are some examples:  
 
 `node liri spotify-this-song rocky raccoon`  
@@ -15,6 +14,22 @@ Returns information about the greatest "Star Wars" movie.
 Displays information about Beck's next concert.  
 
 There is also a *do-what-it-says* function which pulls information from a text file (random.txt) a runs a search based on the contained information. Feel free to change this to something else. All three of LIRI's functions work through the text file as well.  
+`node liri do-what-it-says`  
+No additional parameters are required since it pulls the information from the text file. 
+
 If no input is entered, LIRI will return a pre-determined movie or song.   
+
 [Here is a video of LIRI doing its thing.](https://drive.google.com/file/d/1AWL589ny_oZP6M2Jg_dVaVyMCifU26He/view)  
+[Here's a link to LIRI Bot - even though you're already on this page...](https://github.com/JHaarla/liri-node-app)
+___
+**Technologies Used:**
+* node.js
+* javaScript
+* fs - filesystem for node
+* DotEnv 
+* Moment.js
+* Axios - for API calls
+* Node-Spotify-API 
+___
+This is a project for UNCC Full Stack Web Development Bootcamp. All code written by Jarkko Haarla.
 
