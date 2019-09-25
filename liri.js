@@ -70,11 +70,13 @@ function fetchSpotify() {
             //   console.log(data.tracks.items[0]); 
             //   console.log(data.tracks.items[0].album.name); 
 
-
+            console.log("\n=================================");
             console.log("Artist: " + data.tracks.items[0].album.artists[0].name);
             console.log("Song name: " + data.tracks.items[0].name);
             console.log("Album: " + data.tracks.items[0].album.name);
             console.log("Song preview: " + data.tracks.items[0].preview_url);
+            console.log("=================================\n");
+
 
         });
     } else {
@@ -202,15 +204,15 @@ fs.readFile("random.txt", "utf8", function(error, data) {
         return console.log(error);
     }
 
-console.log(data);
+// console.log(data);
 let randomText = data.split(", ");
-console.log(randomText);
+// console.log(randomText);
 
 let randoAction = randomText[0];
 let randoItem = randomText[1];
 
-console.log(randoAction);
-console.log(randoItem);
+// console.log(randoAction);
+// console.log(randoItem);
 
 switch (randoAction) {
 
@@ -220,7 +222,7 @@ switch (randoAction) {
         break;
 
     case "movie-this":
-        movieName - randoItem;
+        movieName = randoItem;
         fetchMovie();
         break;
 
