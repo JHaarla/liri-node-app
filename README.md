@@ -19,8 +19,10 @@ No additional parameters are required since it pulls the information from the te
 
 If no input is entered, LIRI will return a pre-determined movie or song.   
 
-[Here is a video of LIRI doing its thing.](https://drive.google.com/file/d/1AWL589ny_oZP6M2Jg_dVaVyMCifU26He/view)  
+[Here is a video of LIRI doing its thing.](https://drive.google.com/file/d/1DKCUzFr6l2jluuT3BZsaVXWn_U4wVJ7w/view)  
 [Here's a link to LIRI Bot - even though you're already on this page...](https://github.com/JHaarla/liri-node-app)
+
+**Important:** You'll need to provide your own API keys as those are not included in this repository. 
 ___
 **Technologies Used:**
 * node.js

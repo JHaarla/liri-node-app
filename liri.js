@@ -125,13 +125,13 @@ function fetchConcert() {
     let artistCaps = titleCase(artistFormatted);
 
     let artistQueryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=1e4b7dcd038e8151a1fd002ec56540b2";
-    console.log(artistQueryUrl);
+    // console.log(artistQueryUrl);
 
     axios
         .get(artistQueryUrl)
         .then(function (response) {
 
-            console.log("Here is " + artistCaps + "'s next concert:");
+            console.log("\nHere is " + artistCaps + "'s next concert:");
             console.log("=================================");
             console.log("Lineup: " + response.data[0].lineup);
             console.log("Venue: " + response.data[0].venue.name);
@@ -142,9 +142,9 @@ function fetchConcert() {
         .catch(function (error) {
             if (error.response) {
             }
-            console.log("=================================");
+            console.log("\n=================================");
             console.log("I didn't find any concerts. Double check your spelling, maybe?");
-            console.log("=================================");
+            console.log("=================================\n");
 
         })
 };
@@ -161,13 +161,13 @@ function fetchMovie() {
         }
 
         let queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=1d4cdfb1";
-        console.log(queryUrl);
+        // console.log(queryUrl);
 
         if (movieName === "") {
             axios
                 .get("http://www.omdbapi.com/?t=mr+nobody&y=&plot=short&apikey=1d4cdfb1")
                 .then(function (response) {
-                    console.log("You didn't enter a movie but if you haven't checked out Mr. Nobody, you should...");
+                    console.log("\nYou didn't enter a movie but if you haven't checked out Mr. Nobody, you should...");
                     console.log("=================================");
                     console.log("Title: " + response.data.Title);
                     console.log("Release Year: " + response.data.Year);
